@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Matemáticas 2° - Figuras geométricas</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .opcion { margin: 8px 0; }
+    button { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h2>¿Cuál figura tiene más lados?</h2>
+  <label class="opcion"><input type="radio" name="opcion" value="triángulo"> Triángulo</label><br>
+  <label class="opcion"><input type="radio" name="opcion" value="cuadrado"> Cuadrado</label><br>
+  <label class="opcion"><input type="radio" name="opcion" value="pentágono"> Pentágono</label><br>
+  <br><button onclick="verificar()">Verificar</button>
+  <p id="resultado"></p>
+  <button onclick="location.href='Primaria.html'">Volver al menú</button>
+</body>
+<script>
+  function verificar() {
+    const seleccion = document.querySelector('input[name="opcion"]:checked');
+    const resultado = document.getElementById('resultado');
+    if (!seleccion) {
+      resultado.textContent = "Selecciona una opción.";
+    } else if (seleccion.value === "pentágono") {
+      resultado.textContent = "¡Correcto!";
+    } else {
+      resultado.textContent = "Incorrecto. Intenta otra vez.";
+    }
+  }
+</script>
+</html>

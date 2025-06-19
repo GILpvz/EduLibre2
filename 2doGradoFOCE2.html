@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cívica y Ética 2° - Responsabilidades</title>
+</head>
+<body>
+  <h2>¿Cuál de estas es tu responsabilidad en casa?</h2>
+  <select id="opciones">
+    <option value="">--Selecciona una opción--</option>
+    <option value="jugar videojuegos todo el día">Jugar videojuegos todo el día</option>
+    <option value="ayudar a limpiar mi cuarto">Ayudar a limpiar mi cuarto</option>
+    <option value="dejar los juguetes tirados">Dejar los juguetes tirados</option>
+  </select>
+  <br><br>
+  <button onclick="verificar()">Verificar</button>
+  <p id="resultado"></p>
+  <button onclick="location.href='primaria.html'">Volver al menú</button>
+</body>
+<script>
+  function verificar() {
+    const valor = document.getElementById("opciones").value;
+    const resultado = document.getElementById("resultado");
+    if (valor === "ayudar a limpiar mi cuarto") {
+      resultado.textContent = "¡Correcto! Eso es una responsabilidad.";
+    } else {
+      resultado.textContent = "No es correcto. Intenta otra vez.";
+    }
+  }
+</script>
+</html>

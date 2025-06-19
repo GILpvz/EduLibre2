@@ -1,0 +1,1 @@
+function verificar(respuesta) { const mensaje = document.getElementById('mensaje'); if (respuesta === 3) { mensaje.textContent = '¡Correcto! Hay 3 perros.'; mensaje.style.color = 'green'; } else { mensaje.textContent = 'No es correcto. Intenta de nuevo.'; mensaje.style.color = 'red'; } } function reiniciar() { document.getElementById('mensaje').textContent = ''; }

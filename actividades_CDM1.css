@@ -1,0 +1,41 @@
+body {
+    background: linear-gradient(to bottom, #a8edea, #fed6e3);
+    font-family: 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 600px;
+  }
+  .imagen-cuerpo {
+    width: 120px;
+    margin: 1rem 0;
+  }
+  .opciones button {
+    margin: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    background-color: #8e44ad;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  .opciones button:hover {
+    background-color: #732d91;
+    transform: scale(1.1);
+  }
+  #mensaje {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }

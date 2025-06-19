@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cívica y Ética 2° - Normas</title>
+</head>
+<body>
+  <h2>¿Cuál de estas acciones muestra respeto?</h2>
+  <ul>
+    <li><button onclick="verificar(false)">Empujar a un compañero</button></li>
+    <li><button onclick="verificar(true)">Escuchar cuando alguien habla</button></li>
+    <li><button onclick="verificar(false)">Interrumpir a los demás</button></li>
+  </ul>
+  <p id="resultado"></p>
+  <button onclick="location.href='2doGradoFOCE2.html'">Siguiente ejercicio</button>
+</body>
+<script>
+  function verificar(esCorrecta) {
+    const resultado = document.getElementById("resultado");
+    if (esCorrecta) {
+      resultado.textContent = "¡Muy bien! Eso es respeto.";
+    } else {
+      resultado.textContent = "Esa no es la mejor opción. Inténtalo de nuevo.";
+    }
+  }
+</script>
+</html>

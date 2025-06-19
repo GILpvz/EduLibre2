@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Socioemocional 2° - Emociones</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .opcion { display: block; margin: 8px 0; }
+  </style>
+</head>
+<body>
+  <h2>¿Cómo te sientes hoy?</h2>
+  <label class="opcion"><input type="radio" name="emocion" value="feliz"> Feliz</label>
+  <label class="opcion"><input type="radio" name="emocion" value="triste"> Triste</label>
+  <label class="opcion"><input type="radio" name="emocion" value="enojado"> Enojado</label>
+  <br>
+  <button onclick="mostrar()">Aceptar</button>
+  <p id="mensaje"></p>
+  <button onclick="location.href='2doGradoEduSocio2.html'">Siguiente ejercicio</button>
+</body>
+<script>
+  function mostrar() {
+    const emocion = document.querySelector('input[name="emocion"]:checked');
+    const mensaje = document.getElementById("mensaje");
+    if (emocion) {
+      mensaje.textContent = 'Gracias por compartir que estás  ${emocion.value};'
+    } else {
+      mensaje.textContent = "Selecciona cómo te sientes.";
+    }
+  }
+</script>
+</html>

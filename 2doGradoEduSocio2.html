@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Socioemocional 2° - Manejo de emociones</title>
+</head>
+<body>
+  <h2>¿Qué es lo mejor que puedes hacer cuando estás muy enojado?</h2>
+  <ul>
+    <li><button onclick="respuesta('incorrecta')">Gritar a los demás</button></li>
+    <li><button onclick="respuesta('correcta')">Respirar profundo y calmarme</button></li>
+    <li><button onclick="respuesta('incorrecta')">Romper cosas</button></li>
+  </ul>
+  <p id="mensaje"></p>
+  <button onclick="location.href='primaria.html'">Volver al menú</button>
+</body>
+<script>
+  function respuesta(valor) {
+    const mensaje = document.getElementById("mensaje");
+    if (valor === "correcta") {
+      mensaje.textContent = "¡Correcto! Respirar ayuda a calmarse.";
+    } else {
+      mensaje.textContent = "Esa no es la mejor opción. Intenta otra vez.";
+    }
+  }
+</script>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduLibre – 1° de primaria</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #3498db;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+    }
+    .materia {
+      background: white;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      padding: 15px;
+    }
+    .materia h2 {
+      color: #2c3e50;
+    }
+    button {
+      background: #2ecc71;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .actividad {
+      display: none;
+      margin-top: 10px;
+    }
+    input[type="text"] {
+      padding: 8px;
+      width: 90%;
+      margin-top: 5px;
+    }
+    .resultado {
+      margin-top: 10px;
+      color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>EduLibre – 1° de primaria</h1>
+  <p>Explora y aprende desde cualquier lugar</p>
+</header>
+
+<main>
+
+  <div class="materia">
+    <h2>Español</h2>
+    <button onclick="toggle('esp1')">Actividad 1: Palabras con 'ca', 'co', 'cu'</button>
+    <div id="esp1" class="actividad">
+      <p>Escribe una palabra que empiece con "ca":</p>
+      <input type="text" id="inputEsp1">
+      <button onclick="validarEsp1()">Validar</button>
+      <div class="resultado" id="resEsp1"></div>
+    </div>
+  </div>
+
+  <div class="materia">
+    <h2>Matemáticas</h2>
+    <button onclick="toggle('mat1')">Actividad 1: Sumas básicas</button>
+    <div id="mat1" class="actividad">
+      <p>¿Cuánto es 5 + 3?</p>
+      <input type="text" id="inputMat1">
+      <button onclick="validarMat1()">Validar</button>
+      <div class="resultado" id="resMat1"></div>
+    </div>
+  </div>
+
+  <div class="materia">
+    <h2>Ciencias Naturales</h2>
+    <button onclick="toggle('cien1')">Actividad 1: Seres vivos</button>
+    <div id="cien1" class="actividad">
+      <p>Menciona un ser vivo:</p>
+      <input type="text" id="inputCien1">
+      <button onclick="validarCien1()">Validar</button>
+      <div class="resultado" id="resCien1"></div>
+    </div>
+  </div>
+
+  <div class="materia">
+    <h2>Educación Socioemocional</h2>
+    <button onclick="toggle('socio1')">Actividad 1: ¿Cómo te sientes hoy?</button>
+    <div id="socio1" class="actividad">
+      <p>Describe cómo te sientes hoy:</p>
+      <input type="text" id="inputSocio1">
+      <button onclick="validarSocio1()">Guardar</button>
+      <div class="resultado" id="resSocio1"></div>
+    </div>
+  </div>
+
+  <div class="materia">
+    <h2>Artes</h2>
+    <button onclick="toggle('artes1')">Actividad 1: Dibujo creativo</button>
+    <div id="artes1" class="actividad">
+      <p>Imagina que tienes colores. ¿Qué te gustaría dibujar?</p>
+      <input type="text" id="inputArtes1">
+      <button onclick="validarArtes1()">Enviar</button>
+      <div class="resultado" id="resArtes1"></div>
+    </div>
+  </div>
+
+  <div class="materia">
+    <h2>Educación Física</h2>
+    <button onclick="toggle('eduFis1')">Actividad 1: Movimiento</button>
+    <div id="eduFis1" class="actividad">
+      <p>¿Qué ejercicio puedes hacer en casa?</p>
+      <input type="text" id="inputEduFis1">
+      <button onclick="validarEduFis1()">Enviar</button>
+      <div class="resultado" id="resEduFis1"></div>
+    </div>
+  </div>
+
+</main>
+
+<script>
+  function toggle(id) {
+    const act = document.getElementById(id);
+    act.style.display = act.style.display === "block" ? "none" : "block";
+  }
+
+  function validarEsp1() {
+    const val = document.getElementById("inputEsp1").value.toLowerCase();
+    document.getElementById("resEsp1").innerText =
+      val.startsWith("ca") ? "¡Bien hecho!" : "Intenta con una palabra que empiece con 'ca'.";
+  }
+
+  function validarMat1() {
+    const val = document.getElementById("inputMat1").value;
+    document.getElementById("resMat1").innerText =
+      val === "8" ? "¡Correcto!" : "Revisa tu suma.";
+  }
+
+  function validarCien1() {
+    const val = document.getElementById("inputCien1").value;
+    document.getElementById("resCien1").innerText =
+      val ? "¡Muy bien! Los seres vivos son importantes." : "Escribe algo.";
+  }
+
+  function validarSocio1() {
+    const val = document.getElementById("inputSocio1").value;
+    document.getElementById("resSocio1").innerText =
+      val ? "Gracias por compartir cómo te sientes." : "Escribe algo.";
+  }
+
+  function validarArtes1() {
+    const val = document.getElementById("inputArtes1").value;
+    document.getElementById("resArtes1").innerText =
+      val ? "¡Qué creativo!" : "Escribe tu idea.";
+  }
+
+  function validarEduFis1() {
+    const val = document.getElementById("inputEduFis1").value;
+    document.getElementById("resEduFis1").innerText =
+      val ? "¡Excelente! El ejercicio es importante." : "Escribe un ejercicio.";
+  }
+</script>
+
+</body>
+</html>

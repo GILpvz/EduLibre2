@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <scrip src="actividades_Artes1.js"></scrip>
+  <title>Colorea con Clics</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      background-color: #fffaf0;
+      padding: 20px;
+    }
+    .cuadro {
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+      margin: 10px;
+      border: 2px solid #ccc;
+      cursor: pointer;
+    }
+    #colores button {
+      margin: 5px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Colorea con Clics</h1>
+  <p>Selecciona un color y haz clic en los cuadros para colorearlos.</p>
+
+  <div id="colores">
+    <button style="background-color: red;" onclick="seleccionarColor('red')">Rojo</button>
+    <button style="background-color: blue;" onclick="seleccionarColor('blue')">Azul</button>
+    <button style="background-color: yellow;" onclick="seleccionarColor('yellow')">Amarillo</button>
+    <button style="background-color: green;" onclick="seleccionarColor('green')">Verde</button>
+  </div>
+
+  <div>
+    <div class="cuadro" onclick="colorear(this)"></div>
+    <div class="cuadro" onclick="colorear(this)"></div>
+    <div class="cuadro" onclick="colorear(this)"></div>
+    <div class="cuadro" onclick="colorear(this)"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="actividades_SOCIO1.js"></script>
+  <title>¿Cómo me siento hoy?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f8ff;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    .emocion {
+      display: inline-block;
+      margin: 15px;
+      padding: 15px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 120px;
+      transition: background-color 0.3s;
+    }
+    .emocion:hover {
+      background-color: #d1e7dd;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #006400;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>¿Cómo me siento hoy?</h1>
+  <p>Haz clic en la emoción que estás sintiendo:</p>
+
+  <div class="emocion" onclick="mostrarEmocion('alegre')">Alegre</div>
+  <div class="emocion" onclick="mostrarEmocion('triste')">Triste</div>
+  <div class="emocion" onclick="mostrarEmocion('enojado')">Enojado</div>
+  <div class="emocion" onclick="mostrarEmocion('nervioso')">Nervioso</div>
+  )
+
+  <div id="resultado"></div>
+</body>
+</html>

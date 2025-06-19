@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Educación Física 2° - Actividades</title>
+</head>
+<body>
+  <h2>¿Cuál de estas actividades es una forma de hacer ejercicio?</h2>
+  <ul>
+    <li><button onclick="verificar('jugar futbol')">Jugar fútbol</button></li>
+    <li><button onclick="verificar('ver televisión')">Ver televisión</button></li>
+    <li><button onclick="verificar('comer dulces')">Comer dulces</button></li>
+  </ul>
+  <p id="mensaje"></p>
+  <button onclick="location.href='primaria.html'">Volver al menú</button>
+</body>
+<script>
+  function verificar(opcion) {
+    const mensaje = document.getElementById("mensaje");
+    if (opcion === "jugar futbol") {
+      mensaje.textContent = "¡Correcto! El fútbol es una excelente actividad física.";
+    } else {
+      mensaje.textContent = "Incorrecto. Intenta otra vez.";
+    }
+  }
+</script>
+</html>

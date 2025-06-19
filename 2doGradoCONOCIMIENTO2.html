@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Conocimiento del Medio 2° - Plantas</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .opcion { display: block; margin: 8px 0; }
+  </style>
+</head>
+<body>
+  <h2>¿Qué necesita una planta para vivir?</h2>
+  <label class="opcion"><input type="checkbox" id="agua"> Agua</label>
+  <label class="opcion"><input type="checkbox" id="luz"> Luz del sol</label>
+  <label class="opcion"><input type="checkbox" id="refresco"> Refresco</label>
+  <br>
+  <button onclick="verificar()">Verificar</button>
+  <p id="resultado"></p>
+  <button onclick="location.href='primaria.html'">Volver al menú</button>
+</body>
+<script>
+  function verificar() {
+    const agua = document.getElementById("agua").checked;
+    const luz = document.getElementById("luz").checked;
+    const refresco = document.getElementById("refresco").checked;
+    const resultado = document.getElementById("resultado");
+
+    if (agua && luz && !refresco) {
+      resultado.textContent = "¡Correcto!";
+    } else {
+      resultado.textContent = "Inténtalo de nuevo.";
+    }
+  }
+</script>
+</html>

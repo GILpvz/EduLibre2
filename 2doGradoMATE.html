@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Matemáticas 2° - Suma Básica</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    button { margin-top: 10px; }
+    .respuesta { margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <h2>Resuelve la siguiente suma:</h2>
+  <p><strong>34 + 18 = ?</strong></p>
+  <input type="number" id="respuesta" placeholder="Escribe tu respuesta">
+  <br><button onclick="verificar()">Verificar</button>
+  <p class="respuesta" id="resultado"></p>
+  <button onclick="location.href=' 2doGradoMATE2.html '">Siguiente ejercicio</button>
+</body>
+<script>
+  function verificar() {
+    const r = parseInt(document.getElementById("respuesta").value);
+    const resultado = document.getElementById("resultado");
+    if (r === 52) {
+      resultado.textContent = "¡Correcto!";
+    } else {
+      resultado.textContent = "Incorrecto. Intenta de nuevo.";
+    }
+  }
+</script>
+</html>

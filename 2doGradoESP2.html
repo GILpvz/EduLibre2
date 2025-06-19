@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Español 2° - Sinónimos</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .opcion { margin: 8px 0; }
+    button { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Selecciona el sinónimo de la palabra: <strong>feliz</strong></h2>
+  <label class="opcion"><input type="radio" name="opcion" value="contento"> contento</label>
+  <label class="opcion"><input type="radio" name="opcion" value="triste"> triste</label>
+  <label class="opcion"><input type="radio" name="opcion" value="enojado"> enojado</label>
+  <br><button onclick="verificar()">Verificar</button>
+  <p id="resultado"></p>
+  <button onclick="location.href='primaria.html'">Volver al menú</button>
+</body>
+<script>
+  function verificar() {
+    const seleccion = document.querySelector('input[name="opcion"]:checked');
+    const resultado = document.getElementById('resultado');
+    if (!seleccion) {
+      resultado.textContent = "Selecciona una opción.";
+    } else if (seleccion.value === "contento") {
+      resultado.textContent = "¡Correcto!";
+    } else {
+      resultado.textContent = "Incorrecto. Intenta de nuevo.";
+    }
+  }
+</script>
+</html>s

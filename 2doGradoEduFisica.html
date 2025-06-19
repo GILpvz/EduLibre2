@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Educación Física 2° - Correr</title>
+</head>
+<body>
+  <h2>¿Qué partes del cuerpo usas principalmente al correr?</h2>
+  <label><input type="checkbox" id="piernas"> Piernas</label><br>
+  <label><input type="checkbox" id="brazos"> Brazos</label><br>
+  <label><input type="checkbox" id="orejas"> Orejas</label><br>
+  <br>
+  <button onclick="verificar()">Verificar</button>
+  <p id="resultado"></p>
+  <button onclick="location.href='2doGradoEduFisica2.html'">Siguiente ejercicio</button>
+</body>
+<script>
+  function verificar() {
+    const piernas = document.getElementById("piernas").checked;
+    const brazos = document.getElementById("brazos").checked;
+    const orejas = document.getElementById("orejas").checked;
+    const resultado = document.getElementById("resultado");
+
+    if (piernas && brazos && !orejas) {
+      resultado.textContent = "¡Correcto!";
+    } else {
+      resultado.textContent = "Inténtalo de nuevo.";
+    }
+  }
+</script>
+</html>
